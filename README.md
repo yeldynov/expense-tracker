@@ -2,8 +2,6 @@
 
 Application for tracking income and expenses.
 
-![Main image](/public/screen.png)
-
 ## Build with
 
 - React/Next.js
@@ -11,3 +9,5 @@ Application for tracking income and expenses.
 - Prisma
 - Neon DB
 - Clerk Auth
+
+![Main image](/public/screen.png)
