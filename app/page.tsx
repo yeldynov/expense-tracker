@@ -7,6 +7,7 @@ import { currentUser } from '@clerk/nextjs/server'
 
 const HomePage = async () => {
   const user = await currentUser()
+  console.log(user)
 
   if (!user) {
     return <Guest />
@@ -14,7 +15,10 @@ const HomePage = async () => {
 
   return (
     <main>
-      <h2>Welcome, {user.firstName} </h2>
+      <h2>
+        Welcome,{' '}
+        {user.firstName || user.emailAddresses[0].emailAddress.split('@')[0]}{' '}
+      </h2>
       <Balance />
       <IncomeExpense />
       <AddTransaction />
